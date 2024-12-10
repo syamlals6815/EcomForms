@@ -1,0 +1,28 @@
+{% extends 'adminpanel/base.html' %}
+{% block title %}
+Shopify | Dashboard
+{% endblock %}
+    
+{% block content %}
+<div class="row m-3">
+  <div class="col-lg-9 col-md-6 col-sm-6">
+  <h1> Edit Product</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Add Product</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Edit Product</li>
+    </ol>
+  </nav>
+    <form method="post" class="m-3" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class = "btn btn-primary">Update Product</button>
+    
+    </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

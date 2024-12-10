@@ -1,0 +1,22 @@
+{% extends 'sitevisitor/base.html' %}
+{% block title %}
+Shopify | Home
+{% endblock %}
+    
+{% block content %}
+<div class="row m-3">
+  <h1> User Login</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">User Login</li>
+    </ol>
+  </nav>
+    <form method="post" class="m-3">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class = "btn btn-primary">Login</button>
+    
+    </form>
+</div>
+{% endblock %}

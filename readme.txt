@@ -1,0 +1,2 @@
+username:ecommerce_admin
+password:mypassword1234
